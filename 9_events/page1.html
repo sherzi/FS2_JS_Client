@@ -1,0 +1,48 @@
+<html lang="en">
+
+    <head>
+        <title>Welcome</title>
+        <script src='js/myScript.js'></script>
+        <link type="text/css" rel="stylesheet" href="css/mycss.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="page1.html">Page1</a></li>
+                        <li><a href="page2.html">Page 2</a></li>
+                        <li><a href="page3.html">Page 3</a></li>
+                      </ul>
+                    </div>
+            </nav>
+        <div class="container">
+            <h1>Page 1</h1>
+            <h3>What is your name?</h3>
+
+            <form id=submitName>
+                Enter your name:
+                <input id=firstname name="firstname" type="text">
+                <br><br>
+                Enter your last name:
+                <input id=lastname name="lastname" type="text">
+                <br><br>
+                <button type="button" onclick="fullName()">Submit</button>
+                <br><br>
+                <p id="submitted"></p>
+                <button type="button" id="show1" onclick="page2()">Finish Profile</button>
+                <button type="button" id="show2" onclick="page3()">Enter task</button>
+                <script>
+                document.getElementById("show1").style.visibility = "hidden";
+                document.getElementById("show2").style.visibility = "hidden";
+                </script>
+            </form>
+        </div>
+
+    </body>
+</html>

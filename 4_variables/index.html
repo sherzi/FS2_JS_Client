@@ -1,0 +1,46 @@
+<html lang="en">
+
+    <head>
+        <title>Welcome</title>
+        <script src='js/myScript.js'></script>
+        <link type="text/css" rel="stylesheet" href="css/mycss.css" />
+    </head>
+    <body>
+    <p id="foodList"></p>
+    
+    <p id="foodReplace"></p>
+ 
+    <p id="numSum"></p>
+    <p id="numBoolean"></p>
+
+  <script>
+    var food = ["pizza", "pasta", "onigiri"];
+    document.getElementById("foodList").innerHTML = "A list of food: " + food;
+ 
+    var txt = [ food[0].toUpperCase(),food[1],food[2] ];
+    document.getElementById("foodReplace").innerHTML = "Replace pizza for another food item: " + txt;
+
+    </script>
+
+    <script>
+    var num = [1,3,14,7,1];
+    var sum = num.reduce(totalSum);
+
+    document.getElementById("numSum").innerHTML = "the sum is: " + sum;
+
+    function totalSum(total, value, index, array){
+        return total + value;
+    }
+    </script>
+
+<script>
+    var num = [1,3,14,7,1];
+
+    document.getElementById("numBoolean").innerHTML = "Array is: " + num + "</br>" +
+    "Does the first number equal the 4th number?: " + (num[0]==num[3]) + "</br>" + 
+    "Does the first number equal the 5th number?: " + (num[0]==num[4]);
+    
+    
+</script>
+    </body>
+</html>

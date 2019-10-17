@@ -1,0 +1,45 @@
+<html lang="en">
+
+    <head>
+        <title>Welcome</title>
+        <script src='js/myScript.js'></script>
+        <link type="text/css" rel="stylesheet" href="css/mycss.css" />
+    </head>
+    <body>
+
+        <p id="listWords"></p>
+        <p id="listNums"></p>
+
+        <p id="sortWords"></p>
+        <p id="sortNumbers"></p>
+
+        <script>
+        var words = ["hello", "bonjour", "konichiwa"];
+        var nums = [3,9,17];
+        
+        var letter = "h";
+        var number = 7;
+
+        document.getElementById("listWords").innerHTML = "List of words: " + words;
+        document.getElementById("listNums").innerHTML = "List of numbers: " + nums;
+
+        var i;
+        for (i = 0; i < words.length; i++) {
+            var temp = words[i];
+            if (temp[i] === letter){
+            document.getElementById("sortWords").innerHTML = "This begins with h: " + temp;
+            }
+            else{
+                console.log('No words begin with h!')
+            }
+        }
+
+        var overNumber = nums.filter(sortNums);
+        document.getElementById("sortNumbers").innerHTML = "Numbers greater than 7: " + overNumber;
+
+        function sortNums(value, index, array){
+            return value > number;
+        }
+        </script>
+    </body>
+</html>
